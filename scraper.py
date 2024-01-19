@@ -3,7 +3,7 @@ import requests
 import csv
 
 
-def game(val,writer_obj,text):
+def game(val,writer_obj,text = False):
     leader_board = json.load(val)
     num = 1
 
