@@ -4,7 +4,7 @@ import csv
 
 user_stats = {}
 levelss = set()
-def game(val,writer_obj,text):
+def game(val,writer_obj,text="False"):
     leader_board = json.load(val)
     num = 1
 
@@ -35,7 +35,8 @@ def game(val,writer_obj,text):
         num+=1
 
         levelss.add(data[0]["result"]["data"]["level"]["nextLevelXp"])
-        text.write(f'{data[0]["result"]["data"]["level"]["nextLevelXp"]}\n')
+        if text:
+            text.write(f"Admin spotted lol {uiid}:{name}")
             
 
 
