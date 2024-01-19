@@ -25,14 +25,12 @@ def game(val,writer_obj,text = False):
         level = data[0]["result"]["data"]["level"]["level"]
         created_at = userdata["created_at"]
 
-        writer_obj.writerow([name,uiid,playtime,xp,level,money,driven,drift,skill,created_at])   
-
-        if userdata["admin"]:
-            print(f"Admin spotted lol {uiid}:{name}")
-
+        writer_obj.writerow([name,uiid,playtime,xp,level,money,driven,drift,skill,created_at])      
 
         if text and userdata["admin"]:
             text.write(f"Admin spotted lol {uiid}:{name}")
+            print(f"Admin spotted lol {uiid}:{name}")
+
         
         print(num)
         num+=1
