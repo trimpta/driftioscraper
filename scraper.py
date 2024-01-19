@@ -30,12 +30,13 @@ def game(val,writer_obj,text = False):
         if userdata["admin"]:
             print(f"Admin spotted lol {uiid}:{name}")
 
-        print(num)
-        num+=1
 
         if text and userdata["admin"]:
             text.write(f"Admin spotted lol {uiid}:{name}")
-            
+        
+        print(num)
+        num+=1
+
 
 
 if __name__ == "__main__":
