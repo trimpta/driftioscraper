@@ -29,10 +29,7 @@ def game(val,writer_obj,text):
         writer_obj.writerow([name,uiid,playtime,xp,level,money,driven,drift,skill,created_at])   
 
         if userdata["admin"]:
-            print(f"Admin!!!!! {uiid}:{name}")
-
-        if userdata["is_bot"]:
-            print(f"bot!!!!! {uiid}:{name}")
+            print(f"Admin spotted lol {uiid}:{name}")
 
         print(num)
         num+=1
@@ -42,14 +39,14 @@ def game(val,writer_obj,text):
             
 
 
+if __name__ == "__main__":
+    with open("data.json","r") as f:
+        
+        with open("data.csv","w", encoding="utf-8",newline="") as csvfile:
+            wrter = csv.writer(csvfile)
+            wrter.writerow(["name","uiid","playtime","xp","level","money","driven","drift","skill","created_at"])
 
-with open("data.json","r") as f:
-    
-    with open("data.csv","w", encoding="utf-8",newline="") as csvfile:
-        wrter = csv.writer(csvfile)
-        wrter.writerow(["name","uiid","playtime","xp","level","money","driven","drift","skill","created_at"])
+            with open("levellist.txt","w", encoding="utf-8") as levels:
+                game(f,wrter,levels)
 
-        with open("levellist.txt","w", encoding="utf-8") as levels:
-            game(f,wrter,levels)
-
-print("program executed")
+    print("program executed")
