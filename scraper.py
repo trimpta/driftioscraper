@@ -33,7 +33,6 @@ def game(val,writer_obj,text = False):
         print(num)
         num+=1
 
-        levelss.add(data[0]["result"]["data"]["level"]["nextLevelXp"])
         if text and userdata["admin"]:
             text.write(f"Admin spotted lol {uiid}:{name}")
             
