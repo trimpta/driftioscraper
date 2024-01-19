@@ -2,9 +2,8 @@ import json
 import requests
 import csv
 
-user_stats = {}
-levelss = set()
-def game(val,writer_obj,text="False"):
+
+def game(val,writer_obj,text):
     leader_board = json.load(val)
     num = 1
 
