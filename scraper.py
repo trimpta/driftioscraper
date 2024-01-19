@@ -2,8 +2,7 @@ import json
 import requests
 import csv
 
-user_stats = {}
-levelss = set()
+
 def game(val,writer_obj,text):
     leader_board = json.load(val)
     num = 1
@@ -34,7 +33,6 @@ def game(val,writer_obj,text):
         print(num)
         num+=1
 
-        levelss.add(data[0]["result"]["data"]["level"]["nextLevelXp"])
         text.write(f'{data[0]["result"]["data"]["level"]["nextLevelXp"]}\n')
             
 
