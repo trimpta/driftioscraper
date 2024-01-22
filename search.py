@@ -1,10 +1,15 @@
 import csv
+import sys
+
+if len(sys.argv) == 0:
+    name = input("Enter name to be searched:")
+else:
+    name = sys.argv[-1]
 
 with open("data.csv","r",newline="") as f:
     c = 0
     reader = csv.reader(f)
     
-    name = input("Enter name to be searched:")
     print("Search results:")
     print("Name \t\t\t\t\tUUID")
     for line in reader:
